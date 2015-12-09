@@ -1,44 +1,56 @@
 package com;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
-
 import javax.annotation.PostConstruct;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 
-/**
- * Created by v.golub on 08.12.2015.
- */
 @Service
+@PropertySource("classpath:contacts.properties")
 public class ContactsServiceImpl implements ContactsService {
-    private List<Contact> contacts = new ArrayList<Contact>();
-    @Value("${contact1.name}")
-    private  String name;
+
+    @Autowired
+    private Environment environment;
+
+    @Autowired
+    private ContactsDAO contactsDAO;
 
     @PostConstruct
     public void init(){
-        contacts.add(new Contact(name, null));
+
+        String nameContact;
+        String adressContact;
+
+        for (int i = 1; true; i++){
+            nameContact = environment.getProperty("contact"+i+".name");
+            adressContact = environment.getProperty("contact"+i+".adress");
+
+            if (nameContact != null ){
+                addContact(new Contact(nameContact, adressContact));
+            }else {
+                break;
+            }
+        }
     }
     @Override
     public void addContact(Contact contact) {
-        contacts.add(contact);
+        contactsDAO.add(contact);
     }
 
     @Override
     public void delContact(Contact contact) {
-        contacts.remove(contact);
+        contactsDAO.remove(contact);
     }
 
     @Override
     public void clearAll() {
-        contacts.clear();
+        contactsDAO.clear();
     }
 
     @Override
     public List<Contact> getAllContacts() {
-        return contacts;
+        return contactsDAO.getAllContacts();
     }
 }
