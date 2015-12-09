@@ -13,6 +13,7 @@ public class App {
         System.out.println(contactsService.getAllContacts());
         contactsService.clearAll();
         System.out.println(contactsService.getAllContacts());
+        //q
 
     }
 }
