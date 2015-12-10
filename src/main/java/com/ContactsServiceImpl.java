@@ -1,23 +1,14 @@
 package com;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
-import org.springframework.stereotype.Service;
-import javax.annotation.PostConstruct;
 import java.util.List;
 
-@Service
-@PropertySource("classpath:contacts.properties")
 public class ContactsServiceImpl implements ContactsService {
 
-    @Autowired
     private Environment environment;
 
-    @Autowired
     private ContactsDAO contactsDAO;
 
-    @PostConstruct
     public void init(){
 
         String nameContact;
@@ -52,5 +43,13 @@ public class ContactsServiceImpl implements ContactsService {
     @Override
     public List<Contact> getAllContacts() {
         return contactsDAO.getAllContacts();
+    }
+
+    public void setContactsDAO(ContactsDAO contactsDAO) {
+        this.contactsDAO = contactsDAO;
+    }
+
+    public void setEnvironment(Environment environment) {
+        this.environment = environment;
     }
 }
