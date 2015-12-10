@@ -1,10 +1,5 @@
 package com;
 
-/**
- * Created by v.golub on 08.12.2015.
- */
-
-
 public class Contact {
     private String name;
     private String adress;
