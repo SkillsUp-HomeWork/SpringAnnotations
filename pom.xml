@@ -59,6 +59,8 @@
                 <configuration>
                     <includes>
                         <include>**/*Tests.java</include>
+                        <!--<include>**/AppTests.java</include>-->
+                        <!--<include>**/SpringAppTests.java</include>-->
                     </includes>
                 </configuration>
             </plugin>
