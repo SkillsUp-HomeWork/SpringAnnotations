@@ -17,8 +17,14 @@ public class SpringAppTests {
     private ContactsService contactsService;
 
     @Test
-    public void test(){
-        System.out.println(contactsService.getAllContacts());
-        Assert.assertEquals("1", "1");
+    public void testStartContext(){
     }
+
+//    @Test
+//    public void testAddContact(){
+//        int prev = contactsService.getAllContacts().size();
+//        contactsService.addContact(new Contact("test", "test"));
+//        int curr = contactsService.getAllContacts().size();
+//        Assert.assertFalse(curr == prev);
+//    }
 }

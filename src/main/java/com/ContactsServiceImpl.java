@@ -1,11 +1,11 @@
 package com;
 
-import org.springframework.core.env.Environment;
 import java.util.List;
+import java.util.Properties;
 
 public class ContactsServiceImpl implements ContactsService {
 
-    private Environment environment;
+    private Properties environment;
 
     private ContactsDAO contactsDAO;
 
@@ -49,7 +49,7 @@ public class ContactsServiceImpl implements ContactsService {
         this.contactsDAO = contactsDAO;
     }
 
-    public void setEnvironment(Environment environment) {
+    public void setEnvironment(Properties environment) {
         this.environment = environment;
     }
 }
