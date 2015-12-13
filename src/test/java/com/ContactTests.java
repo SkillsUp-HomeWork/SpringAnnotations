@@ -15,7 +15,7 @@ public class ContactTests {
         Contact mockContact = mock(Contact.class);
         String testName = "name";
         mockContact.setName(testName);
-        verify(mockContact, times(3)).setName(testName);
+        verify(mockContact, times(1)).setName(testName);
 
     }
 }
