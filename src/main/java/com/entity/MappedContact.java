@@ -1,7 +1,7 @@
 package com.entity;
 
 import com.google.common.base.MoreObjects;
-import com.google.common.base.Objects;
+import com.model.ContactRole;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

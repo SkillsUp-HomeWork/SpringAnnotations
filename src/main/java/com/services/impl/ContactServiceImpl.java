@@ -6,17 +6,19 @@ import com.model.Contact;
 import com.services.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class ContactsServiceImpl implements ContactService {
+public class ContactServiceImpl implements ContactService {
 
     @Autowired
     private ContactDao contactDao;
 
     @Override
+    @Transactional
     public void addContact(Contact contact) {
         MappedContact mappedContact = new MappedContact();
         mappedContact.setFirstName(contact.getFirstName());
@@ -39,6 +41,7 @@ public class ContactsServiceImpl implements ContactService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public List<Contact> getAllContacts() {
         List<MappedContact> mappedContacts = contactDao.findAll();
         List<Contact> contacts = new ArrayList<Contact>(mappedContacts.size());

@@ -1,6 +1,5 @@
 package com.model;
 
-import com.entity.ContactRole;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 

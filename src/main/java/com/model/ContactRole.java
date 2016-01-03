@@ -1,4 +1,4 @@
-package com.entity;
+package com.model;
 
 /**
  * Created by admin on 03.01.2016.

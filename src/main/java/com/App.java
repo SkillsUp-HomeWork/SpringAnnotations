@@ -1,7 +1,7 @@
 package com;
 
 import com.config.JavaConfig;
-import com.entity.ContactRole;
+import com.model.ContactRole;
 import com.model.Contact;
 import com.services.ContactService;
 import org.apache.log4j.BasicConfigurator;
