@@ -1,5 +1,6 @@
 package com;
 
+import com.model.Contact;
 import junit.framework.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

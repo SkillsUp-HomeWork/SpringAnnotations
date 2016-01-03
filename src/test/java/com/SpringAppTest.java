@@ -1,5 +1,7 @@
 package com;
 
+import com.config.JavaConfig;
+import com.services.ContactsService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

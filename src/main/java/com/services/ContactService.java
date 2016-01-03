@@ -1,8 +1,10 @@
-package com;
+package com.services;
+
+import com.model.Contact;
 
 import java.util.List;
 
-public interface ContactsService {
+public interface ContactService {
     void addContact(Contact contact);
     void delContact(Contact contact);
     void clearAll();
