@@ -3,7 +3,7 @@ package com.services.impl;
 import com.dao.ContactDao;
 import com.entity.MappedContact;
 import com.model.Contact;
-import com.services.ContactsService;
+import com.services.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class ContactsServiceImpl implements ContactsService {
+public class ContactsServiceImpl implements ContactService {
 
     @Autowired
     private ContactDao contactDao;

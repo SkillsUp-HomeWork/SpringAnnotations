@@ -1,7 +1,7 @@
 package com;
 
 import com.config.JavaConfig;
-import com.services.ContactsService;
+import com.services.ContactService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class SpringAppTest {
 
     @Autowired
-    private ContactsService contactsService;
+    private ContactService contactsService;
 
     @Test
     public void testStartContext(){
