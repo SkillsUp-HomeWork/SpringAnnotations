@@ -16,12 +16,12 @@ public class App {
         ContactService contactService = context.getBean(ContactService.class);
 
         Contact contact = new Contact();
-        contact.setFirstName("firstName");
-        contact.setSecondName("secondName");
+        contact.setFirstName("firstName3");
+        contact.setSecondName("secondName2");
         contact.setState(true);
         contact.setRole(ContactRole.USER);
-        contact.setLogin("login");
-        contact.setPassword("password");
+        contact.setLogin("login2");
+        contact.setPassword("password2");
 
         contactService.addContact(contact);
 

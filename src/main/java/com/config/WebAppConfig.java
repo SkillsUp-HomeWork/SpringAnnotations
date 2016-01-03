@@ -1,0 +1,33 @@
+package com.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.view.JstlView;
+import org.springframework.web.servlet.view.UrlBasedViewResolver;
+
+/**
+ * Created by admin on 03.01.2016.
+ */
+// Говорим, что это конфигурация
+@Configuration
+// Включаем MVC
+@EnableWebMvc
+// Указываем где искать контроллеры и остальные компоненты
+@ComponentScan("com.controller")
+public class WebAppConfig {
+
+    @Bean
+    public UrlBasedViewResolver setupViewResolver() {
+        UrlBasedViewResolver resolver = new UrlBasedViewResolver();
+        // указываем где будут лежать наши веб-страницы
+        resolver.setPrefix("/views/");
+        // формат View который мы будем использовать
+        resolver.setSuffix(".jsp");
+        resolver.setViewClass(JstlView.class);
+
+        return resolver;
+    }
+
+}

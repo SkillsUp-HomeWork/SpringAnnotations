@@ -49,6 +49,10 @@ public class ContactServiceImpl implements ContactService {
             Contact contact = new Contact();
             contact.setFirstName(mappedContact.getFirstName());
             contact.setSecondName(mappedContact.getSecondName());
+            contact.setLogin(mappedContact.getLogin());
+            contact.setPassword(mappedContact.getPassword());
+            contact.setRole(mappedContact.getRole());
+            contact.setState(mappedContact.isState());
             contacts.add(contact);
         }
         return contacts;
