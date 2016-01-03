@@ -15,9 +15,6 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.util.Properties;
 
-/**
- * Created by v.golub on 11.12.2015.
- */
 @Configuration
 @ComponentScan({"com.dao", "com.services"})
 @EnableTransactionManagement

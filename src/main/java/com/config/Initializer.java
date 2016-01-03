@@ -1,8 +1,5 @@
 package com.config;
 
-/**
- * Created by admin on 04.01.2016.
- */
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;

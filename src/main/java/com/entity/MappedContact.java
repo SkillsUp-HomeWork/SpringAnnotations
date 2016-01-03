@@ -9,10 +9,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- * Created by admin on 03.01.2016.
- */
-
 @Entity
 @Table(name = "Contacts")
 public class MappedContact {
@@ -49,10 +45,6 @@ public class MappedContact {
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getFirstName() {
