@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class AppController {
 
     @RequestMapping(value="/",method = RequestMethod.GET )
+    //@RequestMapping("/")
     public String main() {
         System.out.println("123 *********************************** 123 ******************************************************");
         return "index";
